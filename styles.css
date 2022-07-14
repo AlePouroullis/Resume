@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;600;700&display=swap');
 
 :root {
@@ -32,9 +32,7 @@ html {
 body{
   /* force background colour in print preview */
   print-color-adjust: exact !important;
-  background-color: rgb(250, 250, 250);
-  border-left: 1px solid black;
-  border-right: 1px solid black;
+  background-color: rgb(248, 247, 247);
   margin: 0;
 }
 
@@ -104,18 +102,129 @@ ul.links {
 
 
 .main-content h1 {
-  color: var(--text-secondary);
+  color: var(--blue);
   font-size: var(--xl);
   margin: 0;
   text-transform: uppercase;
 }
 
-.main-content hr {
+.main-content .header-line-break {
   margin-top: 0.2rem;
   height: 2px;
   border: none;
-  background-color: var(--text-secondary);
+  background-color: var(--blue);
 }
+
+.main-content h2, .main-content h3, .main-content h4 {
+  margin: 0 0 0.2rem 0;
+  color: var(--blue);
+}
+
+.main-content li {
+  font-size: 1rem;
+}
+
+.main-content li h2 {
+  font-size: 1.1em;
+  font-weight: 700;
+}
+
+.main-content li h3 {
+  font-size: 0.9em;
+  font-weight: 400;
+}
+
+.main-content li p {
+  font-size: 1em;
+}
+
+.independent-endeavours ul, .education ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+.independent-endeavours ul::before, .education ul::before {
+  content: "";
+  width: 2px;
+  background: linear-gradient(to bottom, hsla(220, 84%, 70%), 75%, rgba(0, 0, 0, 0));
+  position: absolute;
+  left: 3px;
+  top: 6px;
+  height: 100%;
+  z-index: -1;
+}
+
+.independent-endeavours li, .education li {
+  position: relative;
+  padding-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.independent-endeavours li::before, .education li::before {
+  content: "";
+  display: inline-block;
+  --dimensions: .5rem;
+  width: var(--dimensions);
+  height: var(--dimensions);
+  background: hsla(220, 84%, 50%);
+  position: absolute;
+  left: 0;
+  top: 5px;
+  border-radius: 50%;
+}
+
+.ext-link {
+  text-decoration: underline;
+  color: var(--light-blue);
+}
+
+time {
+  color: var(--light-blue);
+  font-size: 0.8em;
+}
+
+.courses-list, .courses-sub-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.courses-list > li {
+  margin-bottom: 2rem;
+}
+
+
+.list-icon {
+  margin-right: .5rem;
+}
+
+.skills-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills-list li {
+  padding: .3rem;
+  margin: .2rem;
+  border: 1px dotted black;
+  border-radius: 7px;
+}
+
+.skills hr {
+  margin: .2rem;
+  height: 1px;
+  border: 0;
+  background-image:linear-gradient(to right, rgba(0, 0, 0, 0), hsl(220, 84%, 50%), rgba(0, 0, 0, 0));
+}
+
+
+
+
 
 @media print {
   body {
